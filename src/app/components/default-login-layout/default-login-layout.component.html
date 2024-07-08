@@ -5,11 +5,16 @@
     <img src="/assets/svg/illustration.svg">
   </section>
   <section  class="form-section">
-    <img src="/assets/svg/logo.svg" alt="">
+      <img src="/assets/svg/logo.svg" alt="">
     <h2>{{ titleSecondary }}</h2>
     <ng-content></ng-content>
     <div class="btn-wrapper">
-      <button class="btn-primary" (click)="submit()">{{ primaryBtnText }}</button>
+      <button
+        class="btn-primary"
+        (click)="submit()"
+        [disabled]="disablePrimaryBtn"
+      >
+        {{ primaryBtnText }}</button>
       <div class="divider">
         <div></div>
         <span>or</span>
